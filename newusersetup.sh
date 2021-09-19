@@ -106,10 +106,10 @@ while :
 do
    read -p "What shell do you want? [fish/zsh/bash] " NEWSHELL;
    if [[ "$NEWSHELL" = "fish" ]]; then
-      echo "exec $(which fish)" >> ~/.bashrc
+      echo "exec $(which fish)" >> ~/.bash_profile
       break;
    elif [[ "$NEWSHELL" = "zsh" ]]; then
-      echo "exec $(which zsh)" >> ~/.bashrc
+      echo "exec $(which zsh)" >> ~/.bash_profile
       break;
    elif [[ "$NEWSHELL" = "bash" ]]; then
       break;
