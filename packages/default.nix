@@ -1,0 +1,30 @@
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+aerc
+amfora
+bashInteractive
+deno
+dmd
+dub
+emacs
+fish
+gitFull
+gnumake
+ldc
+mercurial
+micro
+mutt
+nano
+neomutt
+neovim
+rdmd
+screen
+ssmtp
+starship
+tmux
+vim
+zellij
+zsh
+  ];
+}
