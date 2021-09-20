@@ -2,11 +2,8 @@
 {
   environment.systemPackages = with pkgs; [
 aerc
-ameba
 amfora
 bashInteractive
-crystal
-crystal2nix
 deno
 dmd
 dub
@@ -14,7 +11,6 @@ emacs
 fish
 gitFull
 gnumake
-go
 ldc
 mercurial
 micro
@@ -22,14 +18,12 @@ mutt
 nano
 neomutt
 neovim
-nodejs
 rdmd
 screen
 ssmtp
 starship
 tmux
 vim
-yarn
 zellij
 zsh
   ];

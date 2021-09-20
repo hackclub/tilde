@@ -82,7 +82,7 @@ in
   environment.systemPackages = with pkgs; [
     wget
     addusr
-    newusersetup    
+    newusersetup
     about
   ];
 
