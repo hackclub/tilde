@@ -9,8 +9,8 @@
   services.postfix = {
     enable = true;
     config = {
-      myhostname = "localhost";
-      mydomain = "localhost";
+      myhostname = "tilde.hackclub.com";
+      mydomain = "tilde.hackclub.com";
       mynetworks = "127.0.0.1";
       home_mailbox = "mail/";
       mailbox_command = "";
