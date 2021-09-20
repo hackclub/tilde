@@ -52,6 +52,7 @@ echo "That's not a valid answer, you need to type 'y' or 'n'"
 done
 
 cat <<EOF
+
 Now, we have a system to give some basic info about a user (like Slack profiles).
 Don't worry, you can always change these later with \`$ about --edit\`
 To get another user's info, run \`$ about USERNAME\`
@@ -74,6 +75,7 @@ about --edit irc <<< "$IRC"
 
 BIOFILE="$(mktemp)"
 cat <<EOF
+
 The 'nano' editor will now open so that you can edit your bio.
 Feel free to make this as short or long as you wish.
 Press 'Ctrl+x', then 'y' to exit
@@ -117,6 +119,7 @@ do
       echo "Sorry, that's not a shell, please enter 'bash', 'zsh' or 'fish'";
    fi; done
 cat << EOF
+
 ${BOLD}                                  __
                                  / /
 __      ____      ____      __  / / 
@@ -145,9 +148,9 @@ EOF
      echo "Please say 'y'"
    done
    if [[ ! -d ~/public ]]; then
-      echo mkdir ~/public
+      mkdir ~/public
    fi
-   echo ln -s /srv/pub/$USER/www ~/public/www
+   ln -s /srv/pub/$USER/www ~/public/www
    break
 elif [[ "$WEB" = "n" ]]; then
    break
@@ -185,7 +188,7 @@ EOF
       if [[ ! -d ~/public ]]; then
          echo mkdir ~/public
       fi
-      echo ln -s /srv/pub/$USER/gmi ~/public/gmi
+      ln -s /srv/pub/$USER/gmi ~/public/gmi
       break
    elif [[ "$GEMINI" = "n" ]]; then
       break
