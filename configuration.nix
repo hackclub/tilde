@@ -29,7 +29,7 @@ in
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  networking.hostName = "hacktilde"; # Define your hostname.
+  networking.hostName = "tilde.hackclub.com"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
