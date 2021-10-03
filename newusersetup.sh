@@ -66,7 +66,7 @@ read -p "What's your full name? " FULLNAME
 read -p "What do you go by? " NICK
 read -p "Are you working on any projects? (Press enter for none) " PROJ
 read -p "What's your IRC nick? (If you don't know, put your username) " IRC
-about --edit username <<< "$USER"
+about --init --edit username <<< "$USER"
 about --edit full_name <<< "$FULLNAME"
 about --edit pronouns <<< "$PRONOUNS"
 about --edit nick <<< "$NICK"

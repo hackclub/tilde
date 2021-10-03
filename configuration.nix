@@ -84,7 +84,7 @@ in
     wget
     addusr
     newusersetup
-    #about
+    about
   ];
   
   nix = {
