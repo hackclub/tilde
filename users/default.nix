@@ -2,9 +2,9 @@
 { ... }:
 {
   imports = [
-/etc/nixos/users/maddie.nix
-/etc/nixos/users/lin.nix
-/etc/nixos/users/me.nix
-/etc/nixos/users/arc.nix
+./maddie.nix
+./lin.nix
+./me.nix
+./arc.nix
   ];
 }

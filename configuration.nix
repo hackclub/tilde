@@ -4,9 +4,8 @@
 
 { config, pkgs, ... }:
 let
-  addusr = (import ./setupusr/addusr.nix {});
-  newusersetup = (import ./newusersetup.nix {});
-  about = (import ./about {});
+  addusr = (import ./setupusr/addusr.nix {inherit pkgs;});
+  newusersetup = (import ./newusersetup.nix {inherit pkgs;});
 in
 {
   imports =
@@ -33,16 +32,18 @@ in
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
-  time.timeZone = "America/Chicago";
+  time.timeZone = "America/New_York";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  #networking.defaultGateway.address = "10.101.8.1";
+  networking.defaultGateway.address = "10.101.8.1";
   #networking.interfaces.ens3.useDHCP = true;
-  networking.interfaces.ens18.useDHCP = true;
-  #networking.interfaces.enr18.ipv4.addresses = [ { address = "10.101.13.164"; prefixLength = 16; } ];
+  #networking.interfaces.ens18.useDHCP = true;
+  networking.interfaces.ens18.useDHCP = false;
+  networking.interfaces.ens18.ipv4.addresses = [ { address = "10.101.13.164"; prefixLength = 16; } ];
+  networking.nameservers = [ "1.1.1.1" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -83,9 +84,15 @@ in
     wget
     addusr
     newusersetup
-    about
+    #about
   ];
-
+  
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+    experimental-features = nix-command flakes
+    '';
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -102,7 +109,7 @@ in
   services.openssh.passwordAuthentication = false;
   
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 80 443 6697 ];
+  networking.firewall.allowedTCPPorts = [ 22 80 443 1965 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

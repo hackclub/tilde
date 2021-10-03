@@ -3,8 +3,11 @@
   services.nginx = {
     enable = true;
     virtualHosts = {
-      "localhost" = {
+      "tilde.hackclub.com" = {
         locations = {
+	  "~ ^/.well-known/amce-challenge" = {
+            alias = "/var/lib/amce/amce-challenge/";
+	  };
           "/" = {
             root = "/srv/www";
           };

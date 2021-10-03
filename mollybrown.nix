@@ -6,7 +6,7 @@
     certPath = "/srv/gmi/cert.crt";
     keyPath = "/srv/gmi/key.key";
     docBase = "/srv/gmi";
-    hostName = "localhost";
+    hostName = "tilde.hackclub.com";
     settings = {
       homeDocBase = "/srv/pub/gmi";
     };

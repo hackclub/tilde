@@ -1,0 +1,160 @@
+{
+  "nodes": {
+    "about": {
+      "inputs": {
+        "fenix": "fenix",
+        "flake-utils": "flake-utils",
+        "naersk": "naersk",
+        "nixpkgs": "nixpkgs",
+        "rust2nix": "rust2nix"
+      },
+      "locked": {
+        "lastModified": 1632880221,
+        "narHash": "sha256-rwZh8pLUlhaLAJUfzpbxM/nq51jPjULkWwJzwZQuTk8=",
+        "ref": "master",
+        "rev": "9c60c988aadd5663e7fe919fea9e9aae0d4300b6",
+        "revCount": 18,
+        "type": "git",
+        "url": "https://git.sr.ht/~codelongandpros/about"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.sr.ht/~codelongandpros/about"
+      }
+    },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "about",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1632450452,
+        "narHash": "sha256-DcGQ264xj5TNcPfBIHtCX1UiAkyu2+9yP0kxsNaHYtg=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "9b6f84fa9aae5472425450ffcbcb1e2ee06b4389",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1631561581,
+        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "naersk": {
+      "inputs": {
+        "nixpkgs": [
+          "about",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1632266297,
+        "narHash": "sha256-J1yeJk6Gud9ef2pEf6aKQemrfg1pVngYDSh+SAY94xk=",
+        "owner": "nix-community",
+        "repo": "naersk",
+        "rev": "ee7edec50b49ab6d69b06d62f1de554efccb1ccd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1632146492,
+        "narHash": "sha256-+5LSb1alIWujWwFUZ2Juv1U9owBidLDONsz/T7ydDIY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1a56d76d718afb6c47dd96602c915b6d23f7c45d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1632879796,
+        "narHash": "sha256-u8LWRRg/tbYlxdzgAaCLZ2zn+tgHxjbb2M2zivWFA0c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "29632a40460df36041ca3847151ebd1b415f8dc8",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "about": "about",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632422204,
+        "narHash": "sha256-UCwfv8VfQzXlSEYcfXB6eZ1dFBx3UbnCkwjOjVPVHLM=",
+        "owner": "rust-analyzer",
+        "repo": "rust-analyzer",
+        "rev": "d598d0b4f1aba67453287bf1a8e19cf7f47fd2d5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-analyzer",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "rust2nix": {
+      "inputs": {
+        "nixpkgs": [
+          "about",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1632529819,
+        "narHash": "sha256-t6NbYpb/LDZrgBbT5GbmFArCvd2jlRsjSwUuYYxzJxU=",
+        "owner": "anirudhb",
+        "repo": "rust2nix",
+        "rev": "834e88fb9bcdc3b8a1107d9fde4809a64d241282",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anirudhb",
+        "repo": "rust2nix",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
