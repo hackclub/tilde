@@ -8,14 +8,11 @@ bashInteractive
 crystal
 crystal2nix
 deno
-dmd
-dub
 emacs
 fish
 gitFull
 gnumake
 go
-ldc
 mercurial
 micro
 mutt
@@ -23,7 +20,6 @@ nano
 neomutt
 neovim
 python39
-rdmd
 ripgrep
 screen
 ssmtp
