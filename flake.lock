@@ -9,11 +9,11 @@
         "rust2nix": "rust2nix"
       },
       "locked": {
-        "lastModified": 1632919716,
-        "narHash": "sha256-TdCiRQhJqn5wAgdT9p/UMWS1IKI/lM8PTki1V3Q6Tk4=",
+        "lastModified": 1633290438,
+        "narHash": "sha256-81weTF2mG3skQ3UjpTGES2ktPVg0/0V3VH9MuWurZoU=",
         "ref": "master",
-        "rev": "c1b8175590a943840ac8ddd0b63eb53670687163",
-        "revCount": 20,
+        "rev": "e939e081bcac54649839fe6dd2b1cd6ae8bd497b",
+        "revCount": 21,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/about"
       },
@@ -98,11 +98,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1633289355,
-        "narHash": "sha256-f6LxKZju1xPXtvCNExuGiOUCBJsvtPTxT7ZBkESnFsQ=",
+        "lastModified": 1633290447,
+        "narHash": "sha256-BGtSiVSpy5rCHILxoEQAOcuzAhJ68rpUc60sBa1Izgs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "efac565bcb14f780352f247534679673fc29ca5e",
+        "rev": "80d2d0cbe11782779cfef1353ad3d9d36972958a",
         "type": "github"
       },
       "original": {

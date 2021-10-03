@@ -9,7 +9,7 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ (final: prev: { about = about.defaultPackage.${system}; }) ];
+      overlays = [ (final: prev: { about = about.packages.${system}.about; }) ];
     in {
     nixosConfigurations = {
       tilde = lib.nixosSystem {
