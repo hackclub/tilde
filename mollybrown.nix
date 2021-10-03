@@ -8,7 +8,7 @@
     docBase = "/srv/gmi";
     hostName = "tilde.hackclub.com";
     settings = {
-      homeDocBase = "/srv/pub/gmi";
+      homeDocBase = "pub";
     };
   };
 }
