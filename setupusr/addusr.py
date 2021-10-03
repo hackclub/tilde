@@ -7,7 +7,8 @@ from pathlib import Path
 if len(sys.argv) != 4:
     print(f"Usage: {sys.argv[0]} username real_name ssh_token")
     exit(1)
-os.chdir(Path.home() + "/nixos")
+os.chdir("/home/maddie")
+os.chdir("nixos")
 with open(f"users/{sys.argv[1]}.nix", "w") as f:
     print(f"info: creating /etc/nixos/users/{sys.argv[1]}.nix")
     contents = """
@@ -40,9 +41,9 @@ with open("users/default.nix", "w") as f:
 print("info: commiting")
 os.system(f"git add users/{sys.argv[1]}.nix")
 os.system(f"git commit -m \"add {sys.argv[1]}\"")
-os.system("git push origin main"
+os.system("git push origin main")
 print("info: rebuilding NixOS")
-os.system("nixos-rebuild switch --flake github:hackclub/tilde/main")
+os.system("sudo nixos-rebuild switch --flake github:hackclub/tilde/main")
 
 print("info: setting up hosting under /srv/pub/{sys.argv[1]}")
 pub_path = f"/srv/pub/{sys.argv[1]}"
