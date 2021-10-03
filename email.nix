@@ -10,7 +10,7 @@
     enable = true;
     config = {
       myhostname = "mail.tilde.hackclub.com";
-#      mydomain = "hackclub.com";
+      mydomain = "tilde.hackclub.com";
       mynetworks = "127.0.0.1";
       home_mailbox = "mail/";
       mailbox_command = "";
