@@ -2,11 +2,13 @@
 import sys
 import os
 import pwd
+from pathlib import Path
 
 if len(sys.argv) != 4:
     print(f"Usage: {sys.argv[0]} username real_name ssh_token")
     exit(1)
-with open(f"/etc/nixos/users/{sys.argv[1]}.nix", "w") as f:
+os.chdir(Path.home() + "/nixos")
+with open(f"users/{sys.argv[1]}.nix", "w") as f:
     print(f"info: creating /etc/nixos/users/{sys.argv[1]}.nix")
     contents = """
 { pkgs, ... }:
@@ -20,7 +22,6 @@ users.users."%s" = {
 }
 """ % (sys.argv[1], sys.argv[2], sys.argv[3])
     f.write(contents)
-os.chdir("/etc/nixos")
 with open("users/default.nix", "w") as f:
     files = [os.path.abspath(os.path.join("users", file)) for file in os.listdir("users") if file != "default.nix"]
     files = [file for file in files if not file.endswith("/.nix") or not file.endswith("~")]
@@ -36,8 +37,12 @@ with open("users/default.nix", "w") as f:
 """ % ('\n'.join(files))
     f.write(contents)
 
+print("info: commiting")
+os.system(f"git add users/{sys.argv[1]}.nix")
+os.system(f"git commit -m \"add {sys.argv[1]}\"")
+os.system("git push origin main"
 print("info: rebuilding NixOS")
-os.system("nixos-rebuild switch")
+os.system("nixos-rebuild switch --flake github:hackclub/tilde/main")
 
 print("info: setting up hosting under /srv/pub/{sys.argv[1]}")
 pub_path = f"/srv/pub/{sys.argv[1]}"
