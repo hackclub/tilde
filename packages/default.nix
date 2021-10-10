@@ -10,8 +10,9 @@ crystal2nix
 deno
 emacs
 fish
+gcc
+gcc
 gitFull
-gnumake
 go
 mercurial
 micro
