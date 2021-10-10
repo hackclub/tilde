@@ -21,6 +21,7 @@ neomutt
 neovim
 python39
 ripgrep
+rustup
 screen
 ssmtp
 starship
