@@ -85,6 +85,7 @@ in
     addusr
     newusersetup
     about
+    hcwiki
   ];
   
   nix = {

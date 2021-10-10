@@ -4,12 +4,15 @@
   inputs.about = {
     url = "git+https://git.sr.ht/~codelongandpros/about";
   };
-  outputs = { self, nixpkgs, about }:
+  inputs.hcwiki = {
+    url = "git+https://git.sr.ht/~codelongandpros/hcwiki";
+  };
+  outputs = { self, nixpkgs, about, hcwiki }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ (final: prev: { about = about.packages.${system}.about; }) ];
+      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki;} ) ];
     in {
     nixosConfigurations = {
       tilde = lib.nixosSystem {
