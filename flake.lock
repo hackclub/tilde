@@ -104,11 +104,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1633899979,
-        "narHash": "sha256-fu0MGy/rjU9lOsdqznLyuww9GsANE5hDblqPoDeb8c0=",
+        "lastModified": 1633905712,
+        "narHash": "sha256-OupZCPC/S9VotqcOU+WBBPMSf15uV7JQrqGiC3outkc=",
         "ref": "master",
-        "rev": "919ba5bff06a283734bfe565510d5cf05c9aff26",
-        "revCount": 11,
+        "rev": "f48673843862de2aa8ca81b32f96a3f9a114820a",
+        "revCount": 12,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/hcwiki"
       },
@@ -193,11 +193,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1633899635,
-        "narHash": "sha256-UVHcOFY06krLnK80QqpIZ7RXfsEvAX5hIGoXNkY70dY=",
+        "lastModified": 1633901457,
+        "narHash": "sha256-GNJLwKENqEA4xlzkWI76VLHBAua4LUIlTeeiH4FR7Gc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "772285e6bbfc0b7dee56cedbce013184acd52e0c",
+        "rev": "f358794824b4595d77fec93732485d329ed7b0e0",
         "type": "github"
       },
       "original": {
