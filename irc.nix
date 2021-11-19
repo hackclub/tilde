@@ -7,14 +7,20 @@
     enable = true;
     config = ''
     <module name="operjoin">
+    <module name="botmode">
+    <chanhistory bots="no"
+             enableumode="yes"
+             maxlines="50"
+             prefixmsg="yes">
     <server
       name="tilde.hackclub.com"
       description="Hack Club local IRC server"
       network="~Hack">
     <admin
       name="Mirabelle"
-      nick="mirabelle"
-     >
+      nick="mirabelle">
+    <type name="NetAdmin"
+    class="ServerOperators">
      <oper
       name="mirabelle"
       password="$5$J0mx6gbzgl$Ta/v8xo4y.6WTyQM9y9tGykLen7EoUF2AnSmcEmlMK0"
