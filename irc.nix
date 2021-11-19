@@ -9,6 +9,7 @@
     <module name="operjoin">
     <module name="botmode">
     <module name="chanhistory">
+    <module name="password_hash">
     <chanhistory bots="no"
              enableumode="yes"
              maxlines="50"
