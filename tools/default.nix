@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 let
   addusr = (import ./addusr {inherit pkgs;});
   newusersetup = (import ./newusersetup {inherit pkgs;});
