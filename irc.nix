@@ -8,6 +8,7 @@
     config = ''
     <module name="operjoin">
     <module name="botmode">
+    <module name="chanhistory">
     <chanhistory bots="no"
              enableumode="yes"
              maxlines="50"
@@ -27,7 +28,7 @@
       hash="sha256"
       host="*"
       type="NetAdmin"
-      autojoin="#lobby,#announcement"
+      autojoin="#lobby,#announcements"
     >
     <bind
       address="0.0.0.0"
