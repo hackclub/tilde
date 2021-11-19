@@ -10,6 +10,8 @@
     <module name="botmode">
     <module name="chanhistory">
     <module name="password_hash">
+    <module name="sha256">
+    <module name="pbkdf2">
     <chanhistory bots="no"
              enableumode="yes"
              maxlines="50"
