@@ -58,9 +58,9 @@ Don't worry, you can always change these later with \`$ about --edit\`
 To get another user's info, run \`$ about USERNAME\`
 EOF
 
-cat > "/opt/pub/about/${USER}.json"<<EOF
-{"username": "", "full_name": "", "pronouns": "", "bio": "", "working_on": "", "irc":"", "nick": ""}
-EOF
+#cat > "/opt/pub/about/${USER}.json"<<EOF
+#{"username": "", "full_name": "", "pronouns": "", "bio": "", "working_on": "", "irc":"", "nick": ""}
+#EOF
 printf "What are your preferred pronouns? One per line: (Press Ctrl+d when you're done)"
 PRONOUNS="$(cat)"
 read -p "What's your full name? " FULLNAME
