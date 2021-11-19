@@ -72,8 +72,8 @@ sudo chgrp -R users "/srv/pub/${NEW_USER}"
 
 popd # /tmp
 echo rm -rf tilde
-echo exec newusersetup | sudo tee /home/"${NEW_USER}"/.bashrc >/dev/null
-sudo chown "${NEW_USER}" /home/"${NEW_USER}"/.bashrc 
-sudo chgrp users /home/"${NEW_USER}"/.bashrc  
-sudo chmod 755 /home/"${NEW_USER}"/.bashrc  
+echo exec newusersetup | sudo tee /home/"${NEW_USER}"/.bash_profile >/dev/null
+sudo chown "${NEW_USER}" /home/"${NEW_USER}"/.bash_profile 
+sudo chgrp users /home/"${NEW_USER}"/.bash_profile  
+sudo chmod 755 /home/"${NEW_USER}"/.bash_profile  
 popd
