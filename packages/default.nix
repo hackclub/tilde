@@ -14,6 +14,7 @@ gcc
 gcc
 gitFull
 go
+htop
 mercurial
 micro
 mutt
