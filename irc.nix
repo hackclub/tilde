@@ -12,6 +12,8 @@
     <module name="password_hash">
     <module name="sha256">
     <module name="pbkdf2">
+    
+    <mkpasswd operonly="yes">
     <chanhistory bots="no"
              enableumode="yes"
              maxlines="50"
@@ -29,7 +31,7 @@
     class="ServerOperators">
      <oper
       name="mirabelle"
-      password="$5$rRMFfZKtyeG$R7Bjyxkx52B88tiUO/mlo.SoMwjKRkjnNJLwwnOG.kD"
+      password="12288:lkLdMHrb08mjZoAbhvNDSDk7IOP5d6+driL6Ej+SfjI:s346x/ttkdkMjs22aw5FUwV7WisWrSt1hbhwViGBXdU"
       hash="sha256"
       host="*"
       type="NetAdmin"
