@@ -15,7 +15,7 @@
       overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki;} ) ];
     in {
     nixosConfigurations = {
-      tilde = lib.nixosSystem {
+      hacktilde = lib.nixosSystem {
       inherit system;
       modules = [
         ./configuration.nix
