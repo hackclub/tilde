@@ -7,5 +7,6 @@
 ./maddie.nix
 ./me.nix
 ./test.nix
+./zfogg.nix
    ];
 }
