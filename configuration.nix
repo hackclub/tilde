@@ -4,7 +4,7 @@
 
 { config, pkgs, ... }:
 let
-  addusr = (import ./setupusr/addusr.nix {inherit pkgs;});
+  addusr = (import ./addusr {inherit pkgs;});
   newusersetup = (import ./newusersetup.nix {inherit pkgs;});
 in
 {

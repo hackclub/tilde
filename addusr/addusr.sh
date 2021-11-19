@@ -4,21 +4,33 @@ function usage {
    printf "usage: %s username fullname ssh_key" "$0"
    exit 1
 }
-USER="$1"
+function mkmod {
+   if [ "$#" -ne "4" ]; then
+      echo "usage: mkmod name perm usr grp"
+      echo "this is an internal error"
+      exit 1;
+   fi
+   sudo mkdir "$1"
+   sudo chmod "$2" "$1"
+   sudo chown -R "$3" "$1"
+   sudo chgrp -R "$4" "$1"
+}
+
+NEW_USER="$1"
 NAME="$2"
 KEY="$3"
-if [ -z "$USER" ] || [ -z "$NAME" ] || [ -z "$KEY" ]; then
+if [ -z "$NEW_USER" ] || [ -z "$NAME" ] || [ -z "$KEY" ]; then
    usage
 fi
 pushd /tmp
-git clone https://github.com/hackclub/tilde
+git clone https://github.com/hackclub/tilde || exit 1
 pushd /tmp/tilde
-pushd users
+pushd users #/tmp/tilde/users
 # we are in /tmp/tilde/users
-cat > "${USER}.nix" << EOF
+cat > "${NEW_USER}.nix" << EOF
 { pkgs, ... }:
 {
-   users.users."${USER}" = {
+   users.users."${NEW_USER}" = {
     description = "${NAME}";
     isNormalUser = true;
     shell = pkgs.bashInteractive;
@@ -30,24 +42,38 @@ cat > "${USER}.nix" << EOF
 }
 EOF
 
-USERS="$(find . -name '*.nix' -type f -! -name "default.nix" | uniq | sort)"
+NEW_USERS="$(find . -name '*.nix' -type f -! -name "default.nix" | uniq | sort)"
 cat > default.nix << EOF
 { ... }:
 {
    imports = [
-      ${USERS}
+      ${NEW_USERS}
    ];
 }
 EOF
-popd
-echo Gonna rebuild here
-git add .
-git commit -m "Automated addition of ${USER}"
-git push origin main
-sudo nix-collect-garbage
-sudo nixos-rebuild switch --flake github:hackclub/tilde/main
-popd
-pwd
-dirs
-rm -rf tilde
+popd # /tmp/tilde
+git add . || exit 2
+git commit -m "Automated addition of ${NEW_USER}" || exit 2
+git push origin main || exit 2
+sudo nix-collect-garbage || exit 2
+sudo nixos-rebuild switch --flake github:hackclub/tilde/main || exit 2
+popd #/tmp
+pushd /srv/pub
+mkmod "${NEW_USER}" 755 "${NEW_USER}" users
+pushd "${NEW_USER}"
+
+mkmod www 755 "${NEW_USER}" users
+mkmod "/srv/gmi/pub/${NEW_USER}" 755 "${NEW_USER}" users
+
+sudo ln -s "/srv/gmi/pub/${NEW_USER}" gmi
+
+sudo chown -R "${NEW_USER}" "/srv/pub/${NEW_USER}"
+sudo chgrp -R users "/srv/pub/${NEW_USER}"
+
+popd # /tmp
+echo rm -rf tilde
+echo exec newusersetup | sudo tee /home/"${NEW_USER}"/.bashrc >/dev/null
+sudo chown "${NEW_USER}" /home/"${NEW_USER}"/.bashrc 
+sudo chgrp users /home/"${NEW_USER}"/.bashrc  
+sudo chmod 755 /home/"${NEW_USER}"/.bashrc  
 popd
