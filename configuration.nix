@@ -3,11 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-let
-  addusr = (import ./addusr {inherit pkgs;});
-  newusersetup = (import ./newusersetup.nix {inherit pkgs;});
-  rebuild = (import ./rebuild.nix {inherit pkgs;});
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -18,6 +13,7 @@ in
       ./irc.nix
       ./email.nix
       ./packages
+      ./tools
     ];
 
   # Use the GRUB 2 boot loader.
