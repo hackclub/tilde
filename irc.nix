@@ -20,11 +20,13 @@
     <admin
       name="Mirabelle"
       nick="mirabelle">
+    <class name="root" commands="*">
     <type name="NetAdmin"
+    classes="root"
     class="ServerOperators">
      <oper
       name="mirabelle"
-      password="$5$J0mx6gbzgl$Ta/v8xo4y.6WTyQM9y9tGykLen7EoUF2AnSmcEmlMK0"
+      password="$5$rRMFfZKtyeG$R7Bjyxkx52B88tiUO/mlo.SoMwjKRkjnNJLwwnOG.kD"
       hash="sha256"
       host="*"
       type="NetAdmin"
