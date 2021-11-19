@@ -61,7 +61,8 @@ EOF
 cat > "/opt/pub/about/${USER}.json"<<EOF
 {"username": "", "full_name": "", "pronouns": "", "bio": "", "working_on": "", "irc":"", "nick": ""}
 EOF
-read -p "What are your preffered pronouns? " PRONOUNS
+printf "What are your preferred pronouns? One per line: (Press Ctrl+d when you're done)"
+PRONOUNS="$(cat)"
 read -p "What's your full name? " FULLNAME
 read -p "What do you go by? " NICK
 read -p "Are you working on any projects? (Press enter for none) " PROJ
