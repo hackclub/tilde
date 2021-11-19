@@ -32,7 +32,7 @@
      <oper
       name="mirabelle"
       password="12288:lkLdMHrb08mjZoAbhvNDSDk7IOP5d6+driL6Ej+SfjI:s346x/ttkdkMjs22aw5FUwV7WisWrSt1hbhwViGBXdU"
-      hash="sha256"
+      hash=""pbkdf2-hmac-sha256"
       host="*"
       type="NetAdmin"
       autojoin="#lobby,#announcements"
