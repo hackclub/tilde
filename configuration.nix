@@ -6,6 +6,7 @@
 let
   addusr = (import ./addusr {inherit pkgs;});
   newusersetup = (import ./newusersetup.nix {inherit pkgs;});
+  rebuild = (import ./rebuild.nix {inherit pkgs;});
 in
 {
   imports =
@@ -84,6 +85,7 @@ in
     wget
     addusr
     newusersetup
+    rebuild
     about
     hcwiki
   ];
