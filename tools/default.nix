@@ -5,7 +5,7 @@ let
   rebuild = (import ./rebuild.nix {inherit pkgs;});
 in
 {
-  envrionment.systemPackages = [
+  environment.systemPackages = [
     addusr
     newusersetup
     rebuild
