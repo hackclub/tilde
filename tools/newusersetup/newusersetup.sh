@@ -58,33 +58,19 @@ Don't worry, you can always change these later with \`$ about --edit\`
 To get another user's info, run \`$ about USERNAME\`
 EOF
 
-#cat > "/opt/pub/about/${USER}.json"<<EOF
-#{"username": "", "full_name": "", "pronouns": "", "bio": "", "working_on": "", "irc":"", "nick": ""}
-#EOF
-printf "What are your preferred pronouns? One per line: (Press Ctrl+d when you're done)"
-PRONOUNS="$(cat)"
-read -p "What's your full name? " FULLNAME
-read -p "What do you go by? " NICK
-read -p "Are you working on any projects? (Press enter for none) " PROJ
-read -p "What's your IRC nick? (If you don't know, put your username) " IRC
-about --init --edit username "$USER" <<< "$USER"
-about --edit full_name "$USER" <<< "$FULLNAME"
-about --edit pronouns "$USER" <<< "$PRONOUNS"
-about --edit nick "$USER" <<< "$NICK"
-about --edit working_on "$USER" <<< "$PROJ"
-about --edit irc "$USER" <<< "$IRC"
+read -p "What's your name? " FULLNAME
+read -p "What's your nickname (if any)? " NICK
+read -p "What's your timezone offset from UTC (in hours, with decimal (5.0, 3.5))? " OFFSET
+printf "Enter your pronouns, one per line: (Press Ctrl+d when you're done)\n"
+PRONOUNS=$(cat)
+printf "Anything else to put (press Ctrl+d when you're done)\n"
+BIO=$(cat)
+about --init --edit fullname "${USERNAME}" <<< "$FULLNAME"
+about --edit nickname "${USERNAME}" <<< "$NICK"
+about --edit timezone "${USERNAME}" <<< "$OFFSET"
+about --edit pronouns "${USERNAME}" <<< "$PRONOUNS"
+about --edit about "${USERNAME}" <<< "$BIO"
 
-BIOFILE="$(mktemp)"
-cat <<EOF
-
-The 'nano' editor will now open so that you can edit your bio.
-Feel free to make this as short or long as you wish.
-Press 'Ctrl+x', then 'y' to exit
-EOF
-read -p "[Press enter]" NOTHING
-nano "$BIOFILE"
-about --edit bio < "$BIOFILE"
-rm "$BIOFILE"
 AST="${BOLD}*${NORMAL}"
 cat << EOF
 
