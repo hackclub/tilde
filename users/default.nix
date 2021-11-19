@@ -1,11 +1,9 @@
+
 { ... }:
 {
-   imports = [
-      ./arc.nix
-./csalter.nix
-./lin.nix
+  imports = [
 ./maddie.nix
-./me.nix
-./test.nix
-   ];
+./csalter.nix
+./arc.nix
+  ];
 }
