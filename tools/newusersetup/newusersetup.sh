@@ -96,9 +96,11 @@ do
    read -p "What shell do you want? [fish/zsh/bash] " NEWSHELL;
    if [[ "$NEWSHELL" = "fish" ]]; then
       echo "exec $(which fish)" >> ~/.bash_profile
+      echo "exec $(which fish)" >> ~/.bashrc
       break;
    elif [[ "$NEWSHELL" = "zsh" ]]; then
       echo "exec $(which zsh)" >> ~/.bash_profile
+      echo "exec $(which zsh)" >> ~/.bashrc
       break;
    elif [[ "$NEWSHELL" = "bash" ]]; then
       break;
