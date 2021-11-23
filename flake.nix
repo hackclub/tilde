@@ -13,12 +13,12 @@
 
   inputs.agenix.url = "github:ryantm/agenix";
 
-  outputs = { self, nixpkgs, about, hcwiki }:
+  outputs = { self, nixpkgs, about, hcwiki, straembot, agenix }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki;} streambot = streambot.packages.${system}.streambot) ];
+      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki; straembot = straembot.packages.${system}.streambot;}) ];
     in {
     nixosConfigurations = {
       hacktilde = lib.nixosSystem {
