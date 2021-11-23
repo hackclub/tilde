@@ -7,12 +7,18 @@
   inputs.hcwiki = {
     url = "git+https://git.sr.ht/~codelongandpros/hcwiki";
   };
+  inputs.straembot = {
+    url = "git+https://git.sr.ht/~codelongandpros/straembot";
+  };
+
+  inputs.agenix.url = "github:ryantm/agenix";
+
   outputs = { self, nixpkgs, about, hcwiki }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki;} ) ];
+      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki;} streambot = streambot.packages.${system}.streambot) ];
     in {
     nixosConfigurations = {
       hacktilde = lib.nixosSystem {
@@ -20,6 +26,7 @@
       modules = [
         ./configuration.nix
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
+	agenix.nixosModules.age
       ];
       };
     };
