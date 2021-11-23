@@ -34,7 +34,7 @@
     '';
   };
 
-  nix.allowedUsers = [ "root" ];
+  nix.allowedUsers = [ "@wheel" ];
   # List services that you want to enable:
   
   # Enable the OpenSSH daemon.
