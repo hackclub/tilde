@@ -9,6 +9,7 @@
       ./hardware-configuration.nix
       ./nginx.nix
       ./bootloader.nix
+      ./shells.nix
       ./users
       ./ssh.nix
       ./networking.nix
