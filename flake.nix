@@ -28,6 +28,7 @@
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
 	({ pkgs, ...}: { 
           sops.defaultSopsFile = ./sops.yaml;
+          sops.gnupg.sshKeyPaths = [ "/etc/ssh/ssh_host_rsa_key" ];
 	})
       ];
       };
