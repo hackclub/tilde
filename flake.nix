@@ -33,7 +33,7 @@
 	  sops.secrets.tokens = {
             sopsFile = ./secrets/slack.yaml;
             mode = "0440";
-            group = (builtins.trace config.users (builtins.abort "trace hit"));
+            group = (builtins.trace config.users (builtins.abort "trace hit 2"));
           };
 	})
       ];
