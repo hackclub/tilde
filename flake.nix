@@ -26,6 +26,10 @@
 	sops-nix.nixosModules.sops
         ./configuration.nix
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
+	({ pkgs, ...}: { 
+	  imports = [ sops-nix.nixosModules.sops ];
+          sops.defaultSopsFile = ./sops.yaml;
+	})
       ];
       };
     };
