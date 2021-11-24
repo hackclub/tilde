@@ -4,6 +4,6 @@ keys:
 creation_rules:
   - path_regex: secrets/[^/]+\.yaml$
     key_groups:
-      - pgp:
+      - age:
         - *server_hacktilde
         - *admin_maddie
