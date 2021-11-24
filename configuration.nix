@@ -18,6 +18,7 @@
       ./irc.nix
       ./email.nix
       ./packages
+      ./slack.nix
       ./tools
     ];
 
