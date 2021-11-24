@@ -10,10 +10,9 @@
   inputs.straembot = {
     url = "git+https://git.sr.ht/~codelongandpros/straembot";
   };
+  inputs.sops-nix.url = github:Mic92/sops-nix;
 
-  inputs.agenix.url = "github:ryantm/agenix";
-
-  outputs = { self, nixpkgs, about, hcwiki, straembot, agenix }:
+  outputs = { self, nixpkgs, about, hcwiki, straembot, sops-nix}:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -26,7 +25,7 @@
       modules = [
         ./configuration.nix
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
-	agenix.nixosModules.age
+	sops-nix.nixosModules.sops
       ];
       };
     };
