@@ -12,6 +12,7 @@
       ./users
       ./ssh.nix
       ./networking.nix
+      ./gpg.nix
       ./mollybrown.nix
       ./irc.nix
       ./email.nix

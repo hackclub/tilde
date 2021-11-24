@@ -23,9 +23,9 @@
       hacktilde = lib.nixosSystem {
       inherit system;
       modules = [
+	sops-nix.nixosModules.sops
         ./configuration.nix
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
-	sops-nix.nixosModules.sops
       ];
       };
     };
