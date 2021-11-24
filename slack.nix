@@ -3,7 +3,7 @@
   systemd.services.straembot = {
     enable = true;
     path = [ pkgs.straembot ];
-    source = ''
+    script = ''
       source /run/secrets/tokens
       export SLACK_{APP,BOT}_TOKEN
       stream_irc.py &
