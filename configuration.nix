@@ -36,6 +36,7 @@
   };
 
   nix.allowedUsers = [ "@wheel" ];
+  users.mutableUsers = false;
   # List services that you want to enable:
   
   # Enable the OpenSSH daemon.
