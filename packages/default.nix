@@ -13,6 +13,7 @@ fish
 gcc
 gcc
 gitFull
+gnupg
 go
 htop
 mercurial
