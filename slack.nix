@@ -1,6 +1,6 @@
 { pkgs, ...}:
 {
-  system.services.straembot = {
+  systemd.services.straembot = {
     enable = true;
     path = [ pkgs.straembot ];
     source = ''
@@ -9,7 +9,6 @@
       stream_irc.py &
       stream_slack.py &
     '';
-    requireds = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
   };
 }
