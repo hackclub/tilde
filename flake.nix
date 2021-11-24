@@ -29,7 +29,7 @@
 	({ pkgs, ...}: { 
           sops.defaultSopsFile = ./.sops.yaml;
           sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
-	  sops.secrets.hello = {};
+	  sops.secrets.slack = { sopsFile = ./secrets/slack.nix; };
 	})
       ];
       };
