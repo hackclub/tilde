@@ -26,7 +26,7 @@
 	sops-nix.nixosModules.sops
         ./configuration.nix
         ({ pkgs, ...}: { nixpkgs.overlays = overlays; })
-	({ pkgs, ...}: { 
+	({ pkgs, config, ...}: { 
           sops.defaultSopsFile = ./.sops.yaml;
           sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 #          sops.age.generateKey = true;
