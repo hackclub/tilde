@@ -322,11 +322,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1637784582,
-        "narHash": "sha256-SPlLLnF8wCvK42J8rnfjL+OZm3gGKkGAd9xTNHiOf64=",
+        "lastModified": 1637784878,
+        "narHash": "sha256-xHNJHA29HWM4letEx/2hshT6l7Um3MxxVtL75i3oyys=",
         "ref": "master",
-        "rev": "c80b6a0beffceae1884c3f1ea7d5effa1ba62ea2",
-        "revCount": 3,
+        "rev": "0cf2a82db846aa19e0eeebb826f1aa1406beecfe",
+        "revCount": 4,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/straembot"
       },
