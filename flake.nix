@@ -30,7 +30,11 @@
           sops.defaultSopsFile = ./.sops.yaml;
           sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 #          sops.age.generateKey = true;
-	  sops.secrets.tokens = { sopsFile = ./secrets/slack.yaml; };
+	  sops.secrets.tokens = {
+            sopsFile = ./secrets/slack.yaml;
+            mode = "0440";
+            group = config.users.keys.group;
+          };
 	})
       ];
       };
