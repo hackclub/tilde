@@ -1,0 +1,9 @@
+keys:
+  - &admin_maddie: age1uj09qv3rnaa2mef5ejc422493vq3shh6hwq8esafr069auwuhv0sw2nz4z
+  - &server_hacktilde: age13tqvug7arelsvnxfz7eqdl92fs8m57lrxmlje2rj63lelqzkn58qutt049
+creation_rules:
+  - path_regex: secrets/[^/]+\.yaml$
+    key_groups:
+      - pgp:
+        - *server_hacktilde
+        - *admin_maddie
