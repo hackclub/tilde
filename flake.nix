@@ -17,7 +17,7 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki; straembot = straembot.packages.${system}.streambot;}) ];
+      overlays = [ (final: prev: { about = about.packages.${system}.about; hcwiki = hcwiki.packages.${system}.hcwiki; straembot = straembot.packages.${system}.straembot;}) ];
     in {
     nixosConfigurations = {
       hacktilde = lib.nixosSystem {
