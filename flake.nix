@@ -33,7 +33,7 @@
 	  sops.secrets.tokens = {
             sopsFile = ./secrets/slack.yaml;
             mode = "0440";
-            group = builtins.about config.users.keys.group;
+            group = builtins.abort config.users.keys.group;
           };
 	})
       ];
