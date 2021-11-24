@@ -27,6 +27,7 @@
   environment.systemPackages = with pkgs; [
     wget
     about
+    straembot
     hcwiki
   ];
   
