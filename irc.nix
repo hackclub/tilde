@@ -44,7 +44,7 @@
     <connect
       name="main"
       allow="*"
-      maxchans="1">
+      maxchans="100">
  '';
   };
 }
