@@ -3,6 +3,7 @@
   systemd.services.straembot = {
     enable = true;
     path = [ pkgs.straembot ];
+    serviceConfig.User = "straembot";
     script = ''
       source /run/secrets/tokens
       export SLACK_{APP,BOT}_TOKEN
