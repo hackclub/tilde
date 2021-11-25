@@ -2,8 +2,7 @@
 {
   systemd.services.straembot = {
     enable = true;
-    path = [ pkgs.straembot pkgs.nixFlakes ];
-    environment.NIX_PATH = "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos nixos-config=/etc/nixos/configuration.nix /nix/var/nix/profiles/per-user/root/channels";
+    path = with pkgs.straembot; [ irc slack pkgs.nixFlakes ];
     serviceConfig.User = "straembot";
     script = ''
       source /run/secrets/tokens
