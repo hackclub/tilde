@@ -16,6 +16,7 @@ gitFull
 gnupg
 go
 htop
+jq
 mercurial
 micro
 mutt
