@@ -9,4 +9,10 @@
     ];
     extraGroups = [ "tty" ];
   };
+  security.sudo.extraRules = [
+    {
+      users = [ "builder" ];
+      commands = [ { command = "/run/current-system/sw/bin/rebuild"; options = [ "NOPASSWD" ]; } ];
+    }
+  ];
 }
