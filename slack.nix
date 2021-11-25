@@ -7,7 +7,7 @@
     script = ''
       source /run/secrets/tokens
       export SLACK_{APP,BOT}_TOKEN
-      stream_irc.py | stream_slack.py
+      stream_irc | stream_slack
     '';
     wantedBy = [ "multi-user.target" ];
   };
