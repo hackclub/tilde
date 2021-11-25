@@ -38,7 +38,6 @@
     '';
   };
 
-  nix.allowedUsers = [ "@wheel" ];
   users.mutableUsers = true;
   # List services that you want to enable:
   
