@@ -27,7 +27,8 @@
   environment.systemPackages = with pkgs; [
     wget
     about
-    straembot
+    straembot.irc
+    straembot.slack
     hcwiki
   ];
   
