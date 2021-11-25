@@ -6,6 +6,6 @@ mkDerivation {
   buildInputs = with pkgs; [ jq nix  ];
   src = ./.;
   buildPhase = ''
-  install -Dm755 $src/clear_src $out/clear-source
+  install -Dm755 $src/clear_src.sh $out/clear-source
   '';
 }
