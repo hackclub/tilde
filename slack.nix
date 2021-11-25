@@ -2,7 +2,7 @@
 {
   systemd.services.straembot = {
     enable = true;
-    path = [ pkgs.straembot ];
+    path = [ pkgs.straembot pkgs.nixFlakes ];
     serviceConfig.User = "straembot";
     script = ''
       source /run/secrets/tokens
