@@ -3,6 +3,7 @@
    imports = [
       ./anirudh.nix
 ./arc.nix
+./builder.nix
 ./caleb.nix
 ./csalter.nix
 ./lin.nix
