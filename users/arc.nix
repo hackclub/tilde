@@ -5,6 +5,7 @@ users.users."arc" = {
   description = "Arcade Wise";
   isNormalUser = true;
   shell = pkgs.bashInteractive;
-  openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNW1Db7HZy2cD2KN4R7psIRtFrQEdFIpMhZU5Xfw0hjm1rNf7l4tl7kmxSHTvwwayHda8ybQDDlkTd4z1OQUvCCARYjLIyN32PPp4wER4VUPb7FfdTFh/mhUb53k3lcojcb3BmY21Z98kQqNSkIDtQ1jsKVf0Hq10aertpdMEc3Mp/fnq+IsGpHdE0PD44ARp79dijz55Ym8FrVe/duO++HreYcV1oI2e4fyte2N5iBsM3KWrDdVLiTOGyjMSyfEA7BV4W4aDMweUwVZWw4PeHMzJGWwwLON7BuoCG5fNesp/vjnmH9hIQNFkquSSf6GaekBammr3kPzcghFM32F25U2kNdrQKG9CKIskoWKr3KTukEBurK6WFLwdPqRoj8hRpar5WbRmVhwyWvyqt8uqwLdU4FcKJCO85FgjAKVlo8g5KWEpkBCWOUcVzTdX8OYETHOyeHUCVPbNOMW8WL4f1pFaLdhAs8ru2M1W44wYvA6vP190zEknvePx3cOPFFZc= arc@nixGalaxy" ];
+  openssh.authorizedKeys.keys = [  
+  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQNhyjjDaxYpv9mhgK0n8wvPBo1m+3Jak+hQuln6+uaLYaLhkka4v5BHQUU1IjUTXMDIJU3pWzjf2d/vLDAVKxm5YGq2YeFfqxv4iD3Lq8CzIyYQ9ak/P9MaaMXOtdPKO7HuG4VRtaV2h7YuX63Le5XD7BCbJTke1p353IaRlJMD0+aU8ZGbNai+ndaiPNNgWjYuHNIq+4sKw97mBSTCOEA2btJR9Dcha6sbkVPDGSlIG5oY8Kw1cCIUxaJ1XISUdHvY8Q3EH701d3/NhoPGAoiDTmzpT3dTtujFDoIcCsaSf/nJ0OQnoOSbLc4bK4Ii9Qtr7pKRBp3M4osHnbFzzP rsa-key-20211126" ];
 };
 }
