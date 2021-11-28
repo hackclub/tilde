@@ -13,4 +13,5 @@
 ./test.nix
 ./zfogg.nix
    ];
+   users.motd = "Hello and welcome to Hackclub's tilde! Join the irc using irssi then '/connect localhost 6697' and then '/join #tilde'";
 }
