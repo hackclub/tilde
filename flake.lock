@@ -193,11 +193,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1637882183,
-        "narHash": "sha256-J2PoXItGsstIP4NoI36ipEgZMP8Hhht0HmwtvFyBHA0=",
+        "lastModified": 1638138850,
+        "narHash": "sha256-dCgrMTF8p+TbK9aeszVFV9MFO23zDUmr14GMjSG4IBE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "96cf0b7f273370aaa4cdef40e0282a139170cba3",
+        "rev": "f4a5fb66058a6b5a1efa57f78b039b7bd9c44215",
         "type": "github"
       },
       "original": {
@@ -322,11 +322,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1637882679,
-        "narHash": "sha256-p8B0F4/0wjBnQlLulMpi5UW/ZZ0RmoBp6Ijs5SUFL8o=",
+        "lastModified": 1638142602,
+        "narHash": "sha256-OAUXtJNTL7zWuVQYyL1gbqLiXhkOgEfdHL3qG0ln66A=",
         "ref": "master",
-        "rev": "754f4db4ea4e9a5db59a0b63a9263ca191f390e1",
-        "revCount": 9,
+        "rev": "e645c1ef2481780e86c1af14765fcb05b8a09eaf",
+        "revCount": 10,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/straembot"
       },
