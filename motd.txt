@@ -1,0 +1,9 @@
+ _      _____  / /________  ____ ___  ___
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/
+
+To the Hack Club tilde!
+
+Check out the wiki entry for info about IRC, using this command:
+'amfora gemini://tilde.hackclub.com/wiki/Tutorials/irc'
