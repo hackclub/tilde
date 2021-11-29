@@ -1,4 +1,4 @@
 { ... }:
 {
-    users.motd = builtins.readfile ./motd.txt;
+    users.motd = builtins.readFile ./motd.txt;
 }
