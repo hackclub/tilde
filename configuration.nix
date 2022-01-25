@@ -21,6 +21,7 @@
       ./slack.nix
       ./tools
       ./motd.nix
+      ./keyserver.nix
     ];
 
   time.timeZone = "Etc/UTC";
