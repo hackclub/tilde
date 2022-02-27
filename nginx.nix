@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "users" ];
   services.nginx = {
     enable = true;
     virtualHosts = {
