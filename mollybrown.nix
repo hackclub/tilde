@@ -1,6 +1,6 @@
 { ... }:
 {
-  systemd.services.molly-brown.serviceConfig.SupplementaryGroups = [ "root" ];
+  systemd.services.molly-brown.serviceConfig.SupplementaryGroups = [ "root" "users" ];
   services.molly-brown = {
     enable = true;
     certPath = "/srv/gmi/cert.crt";
