@@ -9,6 +9,7 @@
 ./lin.nix
 ./maddie.nix
 ./me.nix
+./msw.nix
 ./straembot.nix
 ./test.nix
 ./zfogg.nix
