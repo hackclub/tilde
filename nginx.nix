@@ -15,6 +15,7 @@
             alias = "/var/lib/amce/amce-challenge/";
 	  };
           "/" = {
+            enableACME = true;
             root = "/srv/www";
           };
           "~ ^/~(.+?)(/.*)?$" = {
