@@ -6,22 +6,21 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./nginx.nix
       ./bootloader.nix
+      ./gpg.nix
+      ./hardware-configuration.nix
+      ./irc.nix
+      ./mollybrown.nix
+      ./motd.nix
+      ./networking.nix
+      ./nginx.nix
+      ./packages
       ./polkit.nix
       ./shells.nix
-      ./users
-      ./ssh.nix
-      ./networking.nix
-      ./gpg.nix
-      ./mollybrown.nix
-      ./irc.nix
-      ./email.nix
-      ./packages
       ./slack.nix
+      ./ssh.nix
       ./tools
-      ./motd.nix
+      ./users
     ];
 
   time.timeZone = "Etc/UTC";
