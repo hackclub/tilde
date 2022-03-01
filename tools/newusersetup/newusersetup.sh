@@ -139,7 +139,7 @@ EOF
    if [[ ! -d ~/public ]]; then
       mkdir ~/public
    fi
-   ln -s /srv/pub/$USER/www ~/public/www
+   ln -s /srv/pub/www/$USER ~/public/www
    break
 elif [[ "$WEB" = "n" ]]; then
    break
