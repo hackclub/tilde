@@ -1,21 +1,15 @@
 { pkgs, ... }:
 {
   systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "users" ];
-  security.acme = {
-    acceptTerms = true;
-    email = "jupiter@m.rdis.dev";
-  };
   services.nginx = {
     enable = true;
     virtualHosts = {
       "tilde.hackclub.com" = {
-        enableACME = true;
         locations = {
 	  "~ ^/.well-known/amce-challenge" = {
             alias = "/var/lib/amce/amce-challenge/";
 	  };
           "/" = {
-            enableACME = true;
             root = "/srv/www";
           };
           "~ ^/~(.+?)(/.*)?$" = {
