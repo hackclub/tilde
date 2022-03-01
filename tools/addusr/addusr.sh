@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex
+set -e
 function usage { 
    printf "usage: %s username fullname ssh_key" "$0"
    exit 1
@@ -23,7 +23,7 @@ if [ -z "$NEW_USER" ] || [ -z "$NAME" ] || [ -z "$KEY" ]; then
    usage
 fi
 pushd /tmp
-git clone https://github.com/hackclub/tilde || exit 1
+git clone git@github.com:hackclub/tilde.git || exit 1
 pushd /tmp/tilde
 pushd users #/tmp/tilde/users
 # we are in /tmp/tilde/users
