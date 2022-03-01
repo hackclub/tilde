@@ -55,8 +55,7 @@ popd # /tmp/tilde
 git add . || exit 2
 git commit -m "Automated addition of ${NEW_USER}" || exit 2
 git push origin main || exit 2
-sudo nix-collect-garbage || exit 2
-sudo nixos-rebuild switch --flake github:hackclub/tilde/main || exit 2
+sudo nixos-rebuild switch --flake . || exit 2
 popd #/tmp
 pushd /srv/pub
 mkmod "${NEW_USER}" 755 "${NEW_USER}" users
