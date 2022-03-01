@@ -175,7 +175,7 @@ EOF
      echo "Please say 'y'"
    done
       if [[ ! -d ~/public ]]; then
-         echo mkdir ~/public
+         mkdir ~/public
       fi
       ln -s /srv/pub/$USER/gmi ~/public/gmi
       break
