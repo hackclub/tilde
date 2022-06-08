@@ -19,6 +19,7 @@ htop
 jq
 mercurial
 micro
+msmtp
 mutt
 nano
 neomutt
@@ -27,7 +28,6 @@ python39
 ripgrep
 rustup
 screen
-ssmtp
 starship
 tmux
 vim
