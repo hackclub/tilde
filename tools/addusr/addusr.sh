@@ -55,7 +55,8 @@ popd # /tmp/tilde
 git add . || exit 2
 git commit -m "Automated addition of ${NEW_USER}" || exit 2
 git push origin main || exit 2
-sudo nixos-rebuild switch --flake . || exit 2
+nixos-rebuild build --flake . || exit 2
+sudo ./result/bin/switch-to-configuration switch|| exit 2
 popd #/tmp
 pushd /srv/pub
 mkmod "${NEW_USER}" 755 "${NEW_USER}" users
