@@ -1,11 +1,22 @@
 { pkgs, ... }:
 {
   systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "users" ];
+  security.acme = {
+    acceptTerms = true;
+    defaults = {
+      credentialsFile = "/run/secrets/dnstokens";
+      dnsProvider = "dnsimple";
+      server = "https://acme-staging-v02.api.letsencrypt.org/directory";
+      email = "jupiter@m.rdis.dev";
+    };
+  };
   services.nginx = {
     enable = true;
     recommendedTlsSettings = true;
     virtualHosts = {
       "tilde.hackclub.com" = {
+        enableACME = true;
+        acmeRoot = null;
         locations = {
 	  "~ ^/.well-known/amce-challenge" = {
             alias = "/var/lib/amce/amce-challenge/";

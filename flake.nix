@@ -35,6 +35,12 @@
             mode = "0440";
             owner = "straembot";
           };
+          sops.secrets.dnstokens = {
+            sopsFile = ./secrets/dnsimple.yaml;
+            mode = "0440";
+            owner = "acme";
+          };
+          
 	})
         (
         {pkgs, ...}: {system.configurationRevision =
