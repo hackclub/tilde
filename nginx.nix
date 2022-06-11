@@ -17,6 +17,7 @@
       "tilde.hackclub.com" = {
         enableACME = true;
         acmeRoot = null;
+        addSSL = true;
         locations = {
 	  "~ ^/.well-known/amce-challenge" = {
             alias = "/var/lib/amce/amce-challenge/";
