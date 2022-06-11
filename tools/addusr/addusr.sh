@@ -59,16 +59,24 @@ nixos-rebuild build --flake . || exit 2
 sudo ./result/bin/switch-to-configuration switch|| exit 2
 popd #/tmp
 pushd /srv/pub
+
+pushd www
 mkmod "${NEW_USER}" 755 "${NEW_USER}" users
-pushd "${NEW_USER}"
-
-mkmod www 755 "${NEW_USER}" users
+popd
+pushd gmi
 mkmod "/srv/gmi/pub/${NEW_USER}" 755 "${NEW_USER}" users
+sudo ln -s "/srv/gmi/pub/${NEW_USER}" "${NEW_USER}"
 
-sudo ln -s "/srv/gmi/pub/${NEW_USER}" gmi
+#mkmod "${NEW_USER}" 755 "${NEW_USER}" users
+#pushd "${NEW_USER}"
 
-sudo chown -R "${NEW_USER}" "/srv/pub/${NEW_USER}"
-sudo chgrp -R users "/srv/pub/${NEW_USER}"
+#mkmod www 755 "${NEW_USER}" users
+#mkmod "/srv/gmi/pub/${NEW_USER}" 755 "${NEW_USER}" users
+
+#sudo ln -s "/srv/gmi/pub/${NEW_USER}" gmi
+
+#sudo chown -R "${NEW_USER}" "/srv/pub/${NEW_USER}"
+#sudo chgrp -R users "/srv/pub/${NEW_USER}"
 
 popd # /tmp
 echo rm -rf tilde
