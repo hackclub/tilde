@@ -104,11 +104,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1633975234,
-        "narHash": "sha256-bXrRqviwUdyGNP3yldv0Dhot0rTA0T8GldvTihUCJxg=",
-        "ref": "master",
-        "rev": "1b2bf26227a8ec1e65b3a97e6648fcd86fbd7bdc",
-        "revCount": 25,
+        "lastModified": 1654972595,
+        "narHash": "sha256-9Qhb59UTZbL+6dW2iqDFkPLpHkeSVUZ3mDRFg+mBG1o=",
+        "ref": "refs/heads/master",
+        "rev": "7e5e6bce3f0aea68043e9e4c7cf22f77370b24a2",
+        "revCount": 26,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/hcwiki"
       },
