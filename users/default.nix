@@ -10,5 +10,6 @@
 ./maddie.nix
 ./msw.nix
 ./straembot.nix
+./tej.nix
    ];
 }
