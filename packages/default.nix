@@ -5,6 +5,7 @@ aerc
 ameba
 amfora
 bashInteractive
+cargo-edit
 crystal
 crystal2nix
 deno
