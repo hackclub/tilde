@@ -9,11 +9,11 @@
         "rust2nix": "rust2nix"
       },
       "locked": {
-        "lastModified": 1637328790,
-        "narHash": "sha256-fYzBys1fZUYgTbh1Pic03CKErB+Dn0tr6bz7Ji70p0Q=",
-        "ref": "master",
-        "rev": "54e3383a9b5da2e62aa5ebcc799ed700acd9aa04",
-        "revCount": 22,
+        "lastModified": 1655154233,
+        "narHash": "sha256-OSIabV4o08eDf2r2tNB8xc9kSAEfTqxHKg9YbMnyat0=",
+        "ref": "refs/heads/master",
+        "rev": "4847271bdc6369635a24126ce185d4838a6d3e4e",
+        "revCount": 25,
         "type": "git",
         "url": "https://git.sr.ht/~codelongandpros/about"
       },
