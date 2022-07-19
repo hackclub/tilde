@@ -11,6 +11,7 @@
 ./la.nix
 ./maddie.nix
 ./msw.nix
+./param.nix
 ./straembot.nix
 ./tej.nix
    ];
