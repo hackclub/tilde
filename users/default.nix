@@ -4,6 +4,7 @@
       ./arc.nix
 ./builder.nix
 ./caleb.nix
+./cheru.nix
 ./csalter.nix
 ./eli.nix
 ./fanoulis.nix
