@@ -13,6 +13,7 @@
 ./maddie.nix
 ./msw.nix
 ./param.nix
+./reesericci.nix
 ./straembot.nix
 ./tej.nix
    ];
