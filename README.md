@@ -1,4 +1,4 @@
-![~Hack](https://user-images.githubusercontent.com/19589006/181278129-0542c1eb-4818-48fd-9284-0ef9edb4c851.png)
+![~Hack](https://user-images.githubusercontent.com/19589006/181278129-0542c1eb-4818-48fd-9284-0ef9edb4c851.png#gh-dark-mode-only)
 
 This is the repo containing the [NixOS](https://nixos.org) configuration for the [hack club tilde](https://tilde.hackclub.com).
 If you've come here looking to join the tilde, you should first join the [hack club](https://hackclub.com) slack.
