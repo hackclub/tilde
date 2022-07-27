@@ -1,4 +1,5 @@
-# ~Hack
+![~Hack](https://user-images.githubusercontent.com/19589006/181278129-0542c1eb-4818-48fd-9284-0ef9edb4c851.png)
+
 This is the repo containing the [NixOS](https://nixos.org) configuration for the [hack club tilde](https://tilde.hackclub.com).
 If you've come here looking to join the tilde, you should first join the [hack club](https://hackclub.com) slack.
 When you are in the hackclub slack, join the `#tilde` channel and ask politely to join, providing a SSH key to login.
