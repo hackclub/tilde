@@ -14,6 +14,13 @@
     enable = true;
     recommendedTlsSettings = true;
     virtualHosts = {
+      "ca.tilde.hackclub.com" = {
+          locations = {
+            "/" = {
+              proxyPass = "http://localhost:6969";
+            };
+          };
+      };
       "tilde.hackclub.com" = {
         enableACME = true;
         acmeRoot = null;
