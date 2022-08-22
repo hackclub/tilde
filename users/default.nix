@@ -8,6 +8,7 @@
 ./csalter.nix
 ./eli.nix
 ./fanoulis.nix
+./ian.nix
 ./ishan.nix
 ./la.nix
 ./maddie.nix
