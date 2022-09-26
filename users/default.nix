@@ -1,7 +1,8 @@
 { ... }:
 {
    imports = [
-      ./arc.nix
+      ./ara.nix
+./arc.nix
 ./builder.nix
 ./caleb.nix
 ./cheru.nix
